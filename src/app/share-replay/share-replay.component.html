@@ -1,0 +1,43 @@
+
+<div class="conatainer">
+  {{allProducts|json}}
+  <h3>All Products</h3>
+  <div class="allproducts my-5" style="display: flex; flex-wrap: wrap;">
+
+    <div class="card my-3 mx-3" style="width: 18rem; height: auto;" *ngFor="let item of allProducts | async">
+      <img src="{{item.image}}" style="object-fit: contain; height: 200px; width: 200px;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+        <!-- <p class="card-text">{{item.description}}</p> -->
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+      <h3>men's clothing</h3>
+      <div class="card d-flex" style="width: 18rem;" *ngFor="let items of clothing |async">
+
+        <img src="{{items.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{items.title}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+
+      <h3>Electronics</h3>
+      <div class="card" style="width: 18rem;" *ngFor="let item of electronics |async">
+        <img src="{{item.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+
+  </div>
+</div>

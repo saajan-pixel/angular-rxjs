@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>ExhaustMap</h1>
+  <strong>Save Data</strong>
+  <hr>
+  <div class="button d-flex">
+    <button class="btn btn-success" #btn>Save DAta</button>
+    <p class="text-warning" *ngIf="fetching">fetching.....</p>
+    <strong>Save Request:{{saverequest}}</strong>
+  </div>
+</div>

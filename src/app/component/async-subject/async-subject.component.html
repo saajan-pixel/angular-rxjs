@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Async Subject</h2>
+  <h2>ADD VIDEO</h2>
+  <hr>
+  <input type="text" #values>
+
+  <button class="btn btn-primary ml-3" (click)="onClick(values)">Add video</button>
+  <ul *ngFor="let item of valuesss" style="color: red;">
+    <li >data :{{valuesss}}</li>
+  </ul>
+
+  <hr>
+  <h4>user 1</h4>
+  <strong>Video: {{asyncVideoEmit}}</strong>
+  <br>
+  <button class="btn btn-success mt-3" (click)="onComplete()">Complete Subscription</button>
+</div>

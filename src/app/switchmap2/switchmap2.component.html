@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <!-- template driven form -->
+  <form #searchform="ngForm">
+    <input
+      type="text"
+      name="searchTerm"
+      required
+      class="form-control"
+      ngModel
+      placeholder="search here"
+      autocomplete="off"
+    />
+    <!-- name property is required to access its value -->
+  </form>
+<p>{{count}} items found</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <th scope="col">{{ item.id }}</th>
+        <th scope="col">{{ item.title }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
