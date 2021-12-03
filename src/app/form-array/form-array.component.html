@@ -1,0 +1,167 @@
+<!-- <div class="container">
+
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">ClassName</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Total</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="total" />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Teacher</label>
+      <input type="text" class="form-control" formControlName="teacher" id="exampleInputPassword1" />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">section</label>
+      <input type="text" class="form-control" formControlName="section"  id="exampleInputPassword1" />
+    </div>
+    <br>
+
+    <label for="exampleInputPassword1">Bulding</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" formControlName="building" name="bulding" value="Building1"
+        id="flexRadioDefault2" />
+      <label class="form-check-label" for="flexRadioDefault2"> Building1 </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" formControlName="building" name="bulding" value="Building2"
+        id="flexRadioDefault2" />
+      <label class="form-check-label" for="flexRadioDefault2"> Building2 </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button><br><br>
+
+
+     <div class="btn mt-2">
+      <button class="btn btn-info stud" (click)="keyAddEvent()">Add New Student</button>
+    </div>
+    <table class="table mt-3" formArrayName="students">
+      <thead>
+        <tr>
+          <th scope="col">S.N</th>
+          <th scope="col">ClassName</th>
+          <th scope="col">Rollno</th>
+          <th scope="col">House</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          [formGroupName]="i"
+          *ngFor="let sd of getStudentDetail(form); index as i"
+        >
+          <th scope="row">{{ i + 1 }}</th>
+          <td><input type="text" fd-form-control formControlName="name" /></td>
+          <td><input type="number" fd-form-control formControlName="rollno" /></td>
+          <td><input type="text" fd-form-control formControlName="house" /></td>
+          <td><div style="width: 120px;">
+            Male<input class="mr-3" type="radio" value="male" fd-form-control formControlName="gender">
+            Female<input type="radio" value="female" fd-form-control formControlName="gender">
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+
+
+</div> -->
+
+{{ enumCat[0] }}
+<div class="container">
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">age</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        formControlName="age"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">address</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="address"
+        id="exampleInputPassword1"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button
+    ><br /><br />
+
+    <div class="btn mt-2">
+      <button class="btn btn-info stud" (click)="keyAddEvent()">
+        Add New Student
+      </button>
+    </div>
+
+    <table formArrayName="school" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>School Name</th>
+          <th>Region</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          [formGroupName]="i"
+          *ngFor="let abc of getSchoolDetail(form); index as i"
+        >
+          <td><input type="text" formControlName="sname" /></td>
+          <td><input type="text" formControlName="region" /></td>
+          <td>
+            <button (click)="enableschoolFormGroup(i, form)">Edit</button>
+            <button (click)="removeSchool(i, form)">Del</button>
+          </td>
+          <button (click)="addClass(abc)" class="mt-3">
+            Add Class
+          </button>
+
+          <table class="table" formArrayName="class">
+            <thead>
+              <th>Section</th>
+              <th>Nuber Student</th>
+            </thead>
+            <tbody>
+              <tr
+                [formGroupName]="j"
+                *ngFor="let xyz of getClassDetail(abc); index as j"
+              >
+                <td>
+                  <input type="text" formControlName="section" />
+                  <button (click)="getAccess(abc, xyz)">add</button>
+                </td>
+                <td><input type="text" formControlName="numberstd" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+{{ form.getRawValue() | json }}

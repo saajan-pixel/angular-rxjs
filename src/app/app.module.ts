@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AsyncSubjectComponent } from './component/async-subject/async-subject.component';
@@ -16,6 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExhaustmapComponent } from './exhaustmap/exhaustmap.component';
 import { ShareReplayComponent } from './share-replay/share-replay.component';
 import { CombineLetestComponent } from './combine-letest/combine-letest.component';
+import { ZipForkJoinComponent } from './zip-fork-join/zip-fork-join.component';
+import { PromiseComponent } from './promise/promise.component';
+import { FormArrayComponent } from './form-array/form-array.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +35,11 @@ import { CombineLetestComponent } from './combine-letest/combine-letest.componen
     Switchmap2Component,
     ExhaustmapComponent,
     ShareReplayComponent,
-    CombineLetestComponent
+    CombineLetestComponent,
+    ZipForkJoinComponent,
+    PromiseComponent,
+    FormArrayComponent,
+
   ],
   imports: [
     BrowserModule,

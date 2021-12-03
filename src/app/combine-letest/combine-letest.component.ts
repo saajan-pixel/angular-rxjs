@@ -36,7 +36,7 @@ export class CombineLetestComponent implements OnInit, AfterViewInit {
     );
 
     //ex-01 combineLatest
-    combineLatest(nameObs, colorObs).subscribe(([name, color]) => {
+    combineLatest([nameObs, colorObs]).subscribe(([name, color]) => {
       console.log(name, color);
       this.createbox(name, color, 'elid');
     });

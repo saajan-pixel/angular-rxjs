@@ -6,13 +6,17 @@ import { ConcatComponent } from './concat/concat.component';
 import { ConcatmapComponent } from './concatmap/concatmap.component';
 import { Concatmap2Component } from './concatmap2/concatmap2.component';
 import { ExhaustmapComponent } from './exhaustmap/exhaustmap.component';
+import { FormArrayComponent } from './form-array/form-array.component';
 import { MergeComponent } from './merge/merge.component';
 import { MergemapComponent } from './mergemap/mergemap.component';
+import { PromiseComponent } from './promise/promise.component';
 import { ShareReplayComponent } from './share-replay/share-replay.component';
 import { SwitchmapComponent } from './switchmap/switchmap.component';
 import { Switchmap2Component } from './switchmap2/switchmap2.component';
+import { ZipForkJoinComponent } from './zip-fork-join/zip-fork-join.component';
 
 const routes: Routes = [
+  {path:'promise',component:PromiseComponent},
   {path:'asyncsubject',component:AsyncSubjectComponent},
   {path:'concat',component:ConcatComponent},
   {path:'merge',component:MergeComponent},
@@ -24,6 +28,8 @@ const routes: Routes = [
   {path:'exhaustmap',component:ExhaustmapComponent},
   {path:'shareReplay',component:ShareReplayComponent},
   {path:'combineLatest',component:CombineLetestComponent},
+  {path:'zip',component:ZipForkJoinComponent},
+  {path:'formarray',component:FormArrayComponent},
 ];
 
 @NgModule({
