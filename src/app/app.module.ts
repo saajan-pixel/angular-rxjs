@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ExhaustmapComponent } from './exhaustmap/exhaustmap.component';
 import { ShareReplayComponent } from './share-replay/share-replay.component';
+import { CombineLetestComponent } from './combine-letest/combine-letest.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ShareReplayComponent } from './share-replay/share-replay.component';
     Concatmap2Component,
     Switchmap2Component,
     ExhaustmapComponent,
-    ShareReplayComponent
+    ShareReplayComponent,
+    CombineLetestComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CombineLetestComponent } from './combine-letest/combine-letest.component';
 import { AsyncSubjectComponent } from './component/async-subject/async-subject.component';
 import { ConcatComponent } from './concat/concat.component';
 import { ConcatmapComponent } from './concatmap/concatmap.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'switchmap2',component:Switchmap2Component},
   {path:'exhaustmap',component:ExhaustmapComponent},
   {path:'shareReplay',component:ShareReplayComponent},
+  {path:'combineLatest',component:CombineLetestComponent},
 ];
 
 @NgModule({
