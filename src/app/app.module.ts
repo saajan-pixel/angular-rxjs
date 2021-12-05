@@ -20,6 +20,7 @@ import { CombineLetestComponent } from './combine-letest/combine-letest.componen
 import { ZipForkJoinComponent } from './zip-fork-join/zip-fork-join.component';
 import { PromiseComponent } from './promise/promise.component';
 import { FormArrayComponent } from './form-array/form-array.component';
+import { Formarray2Component } from './formarray2/formarray2.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { FormArrayComponent } from './form-array/form-array.component';
     ZipForkJoinComponent,
     PromiseComponent,
     FormArrayComponent,
+    Formarray2Component,
 
   ],
   imports: [

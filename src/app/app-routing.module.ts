@@ -7,6 +7,7 @@ import { ConcatmapComponent } from './concatmap/concatmap.component';
 import { Concatmap2Component } from './concatmap2/concatmap2.component';
 import { ExhaustmapComponent } from './exhaustmap/exhaustmap.component';
 import { FormArrayComponent } from './form-array/form-array.component';
+import { Formarray2Component } from './formarray2/formarray2.component';
 import { MergeComponent } from './merge/merge.component';
 import { MergemapComponent } from './mergemap/mergemap.component';
 import { PromiseComponent } from './promise/promise.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path:'combineLatest',component:CombineLetestComponent},
   {path:'zip',component:ZipForkJoinComponent},
   {path:'formarray',component:FormArrayComponent},
+  {path:'formarray2',component:Formarray2Component},
 ];
 
 @NgModule({

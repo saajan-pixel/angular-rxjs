@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Wild Name</label>
+      <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Height</label>
+      <input type="number" formControlName="height" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="table" >
+      <button class="btn btn-primary" (click)="FormAddEvent()">Add Country</button>
+      <table class="table" formArrayName="country">
+        <thead>
+          <th>CountryName</th>
+          <th>Continient</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr [formGroupName]="i" *ngFor="let abc of getCountryDetail(form); index as i">
+            <td><input type="text" formControlName="countryname"></td>
+            <td><input type="text" formControlName="continient"></td>
+            <td><button class="btn btn-warning mr-3" (click)="enableIForm(form,i)">Edit</button> <button class="btn btn-danger" (click)="removeCountry(form,i)">Del</button></td>
+
+
+            <!-- gender table formarray -->
+            <button class="but my-3" (click)="GenderAddEvent(abc)">Add Names</button>
+            <table class="table" formArrayName="gender">
+
+              <thead>
+                <th>Male</th>
+                <th>Female</th>
+              </thead>
+              <tbody>
+                <tr [formGroupName]="j" *ngFor="let xyz of getGenderDetail(abc); index as j">
+                  <td><input type="text" formControlName="male"></td>
+                  <td><input type="text" formControlName="female"></td>
+                  <td><button class="btn btn-warning mr-3" (click)="enablegenderForm(abc,i)">Edit</button> <button class="btn btn-danger" (click)="removeGenderForm(abc,i)">Del</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+        </tbody>
+
+
+      </table>
+    </div>
+
+  </form>
+</div>
