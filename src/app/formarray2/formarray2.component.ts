@@ -144,16 +144,16 @@ export class Formarray2Component implements OnInit {
     return abc.get('gender').controls
   }
 
-  enablegenderForm(abc:any,i:any){
-    const x=abc.controls.gender.controls[i]
+  enablegenderForm(abc:any,j:any){
+    const x=abc.controls.gender.controls[j]
     x.enable()
   }
 
-  removeGenderForm(abc:any,i:any){
+  removeGenderForm(abc:any,j:any){
     // const y=abc.controls.gender
     const y=abc.get('gender')
     if(y.length>1){
-      y.removeAt(i)
+      y.removeAt(j)
     }
   }
 

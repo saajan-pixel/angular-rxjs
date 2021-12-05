@@ -37,7 +37,7 @@
                 <tr [formGroupName]="j" *ngFor="let xyz of getGenderDetail(abc); index as j">
                   <td><input type="text" formControlName="male"></td>
                   <td><input type="text" formControlName="female"></td>
-                  <td><button class="btn btn-warning mr-3" (click)="enablegenderForm(abc,i)">Edit</button> <button class="btn btn-danger" (click)="removeGenderForm(abc,i)">Del</button></td>
+                  <td><button class="btn btn-warning mr-3" (click)="enablegenderForm(abc,j)">Edit</button> <button class="btn btn-danger" (click)="removeGenderForm(abc,j)">Del</button></td>
                 </tr>
               </tbody>
             </table>
